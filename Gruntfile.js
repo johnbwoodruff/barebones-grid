@@ -42,6 +42,15 @@ module.exports = function(grunt) {
 				dest: 'dist/<%= pkg.name %>.min.css'
 			}
 		},
+		// Update app versions
+		bumpup: {
+			files: ['package.json', 'bower.json']
+		},
+		// Generate Changelog
+		changelog: {
+			options: {
+			}
+		},
 		// Empties folders to start fresh
 		clean: {
 			dist: {
@@ -88,6 +97,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-conventional-changelog');
 	grunt.loadNpmTasks('grunt-bumpup');
 
 	grunt.registerTask('bump:pre', ['bumpup:prerelease']);
