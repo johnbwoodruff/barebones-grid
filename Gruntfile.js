@@ -88,8 +88,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-bumpup');
+
+	grunt.registerTask('bump:pre', ['bumpup:prerelease']);
+	grunt.registerTask('bump:bug', ['bumpup:patch', 'changelog']);
+	grunt.registerTask('bump:minor', ['bumpup:minor', 'changelog']);
+	grunt.registerTask('bump:major', ['bumpup:major', 'changelog']);
 
 	// Default task.
-	grunt.registerTask('default', ['clean', 'jshint', 'less', 'concat', 'cssmin']);
-
+	grunt.registerTask('build', ['clean', 'jshint', 'less', 'concat', 'cssmin']);
 };
