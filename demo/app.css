@@ -1,0 +1,10 @@
+.shaded {
+	background-color:#EEEEEE;
+	min-height:40px;
+	padding-top:10px;
+	border:1px solid #cccccc;
+}
+
+.text-center {
+	text-align:center;
+}
