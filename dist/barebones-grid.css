@@ -1,12 +1,12 @@
 /*! barebones-grid - v0.1.0 - 2014-12-23
 * http://jbw91.github.io/barebones-grid
 * Copyright (c) 2014 John Woodruff; Licensed MIT */
-.clearfix:before,
-.clearfix:after {
+.clear:before,
+.clear:after {
   content: " ";
   display: table;
 }
-.clearfix:after {
+.clear:after {
   clear: both;
 }
 * {
@@ -20,7 +20,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.container {
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.fixed-box {
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -28,21 +34,21 @@
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  .container {
+  .fixed-box {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .fixed-box {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .fixed-box {
     width: 1170px;
   }
 }
-.container-fluid {
+.fluid-box {
   position: relative;
   width: 100%;
   margin: 0 auto;

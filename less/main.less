@@ -7,7 +7,7 @@
 	box-sizing: @boxmodel;
 }
 
-.clearfix {
+.clear {
 	&:before,
 	&:after {
 		content: " ";
@@ -26,7 +26,14 @@
 	.box-sizing(border-box);
 }
 
-.container {
+.float-left {
+	float:left;
+}
+.float-right {
+	float:right;
+}
+
+.fixed-box {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
@@ -37,7 +44,7 @@
 	@media (min-width: @screen-lg) { width: @container-lg; }
 }
 
-.container-fluid {
+.fluid-box {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;

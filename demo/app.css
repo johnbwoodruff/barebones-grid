@@ -13,9 +13,15 @@ h1,h2,h3,h4,h5,h6 {
 
 code {
 	padding: 2px 4px;
-	font-size: 97%;
-	color: #c7254e;
-	background-color: #f9f2f4;
+	font-size: 90%;
+	color: #3F51B5;
+	background-color: #E8EAF6;
+	border: 1px solid #C5CAE9;
+	border-radius: 4px;
+}
+
+p {
+	line-height: 26px;
 }
 
 button {
@@ -26,18 +32,12 @@ button {
 	color: white;
 	font-weight: 100;
 	cursor:pointer;
+	border-radius:4px;
 }
 
 h2 {
 	border-bottom:1px solid #cccccc;
 	margin-bottom:20px;
-}
-
-.pull-left {
-	float:left;
-}
-.pull-right {
-	float:right;
 }
 
 #header {
@@ -53,7 +53,7 @@ h2 {
 #header > button {
 	font-size:20px;
 }
-#header > .container {
+#header > .fixed-box {
 	padding-top:40px;
 }
 
@@ -78,11 +78,11 @@ h2 {
 }
 
 .shaded {
-	background-color:#EEEEEE;
-	min-height:40px;
-	padding-top:10px;
-	border:1px solid #cccccc;
-	text-align:center;
+	background-color: #F5F5F5;
+	min-height: 40px;
+	padding-top: 10px;
+	border: 1px solid #CCC;
+	text-align: center;
 }
 
 .text-center {
