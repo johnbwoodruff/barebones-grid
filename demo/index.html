@@ -4,11 +4,26 @@
 	<title>Barebones Grid Demo</title>
 	<link rel="stylesheet" href="../dist/barebones-grid.min.css">
 	<link rel="stylesheet" href="app.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Fixed Width Container</h1>
-	<p>In the event that you wish to have a site with a layout no wider than 960px, you can use the <code>.container</code> class. Below 960px, the container will fluidly remain at 100% width.</p>
-	<div class="container text-center">
+	<div id="header">
+		<div class="container">
+			<div class="pull-left">
+				<h1>Barebones Grid</h1>
+				<h3 class="description">A simple responsive grid-based CSS framework</h3>
+			</div>
+			<div class="pull-right">
+				<button><i class="fa fa-download"></i> Download .zip</button>
+			</div>
+			<div class="clearfix"></div>
+			<div class="github">
+				<a href="https://github.com/jbw91/barebones-grid" target="_blank"><i class="fa fa-github"></i> View Project on GitHub</a>
+			</div>
+		</div>
+	</div>
+	<div id="examples" class="container">
+		<h2>Example</h2>
 		<div class="row">
 			<div class="md-1 shaded">.md-1</div>
 			<div class="md-1 shaded">.md-1</div>
@@ -23,6 +38,27 @@
 			<div class="md-1 shaded">.md-1</div>
 			<div class="md-1 shaded">.md-1</div>
 		</div>
+		<div class="row">
+			<div class="md-8 shaded">.md-8</div>
+			<div class="md-2 shaded">.md-2</div>
+			<div class="md-2 shaded">.md-2</div>
+		</div>
+		<div class="row">
+			<div class="md-6 shaded">.md-6</div>
+			<div class="md-6 shaded">.md-6</div>
+		</div>
+		<div class="row">
+			<div class="md-8 md-offset-2 shaded">.md-8 .md-offset-2</div>
+		</div>
+		<h2>Fixed Width Container</h2>
+		<p>In the event that you wish to have a site with a more fixed layout, you can use the <code>.container</code> class. Below <code>768px</code>, the container will fluidly remain at 100% width. The breakpoints above <code>768px</code> are <code>992px</code> and <code>1200px</code></p>
+		<h2>Column Sizes</h2>
+		<p>There are four different column sizes. Large, Medium, Small, and Extra Small. Barebones Grid is based off of a standard 12 column layout. To use the columns, simply give the class <code>.{type}-*</code> to the object. In the case of a medium sized column, if you wish the object to have half the container size, give the class <code>.md-6</code>.</p>
+		<h2>Large Columns</h2>
+		<p>Large columns are for screen sizes of <code>1200px</code> and up. Anything under that size, without specifying a smaller column size, will cause the columns to stack. Use the class <code>.lg-{num}</code> where <code>{num}</code> is a number from 1 to 12.</p>
+		<h2>Medium Columns</h2>
+		<p>Medium columns are for screen sizes from <code>992px</code> up to <code>1199px</code>. Again, below that size and the columns will stack. Above that size, however, the columns will remain the same proportion with relation to the screen size. Use the class <code>.md-{num}</code> where <code>{num}</code> is a number from 1 to 12.</p>
+
 	</div>
 
 

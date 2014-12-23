@@ -1,10 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400;
+	margin:0;
+}
+
+code {
+	padding: 2px 4px;
+	font-size: 97%;
+	color: #c7254e;
+	background-color: #f9f2f4;
+}
+
+button {
+	background-color: transparent;
+	border: 1px solid white;
+	padding: 15px 30px;
+	font-size: 15px;
+	color: white;
+	font-weight: 100;
+	cursor:pointer;
+}
+
+h2 {
+	border-bottom:1px solid #cccccc;
+	margin-bottom:20px;
+}
+
+.pull-left {
+	float:left;
+}
+.pull-right {
+	float:right;
+}
+
+#header {
+	width: 100%;
+	height: 200px;
+	background-color: #3F51B5;
+	color: #FFFFFF;
+}
+#header > h1 {
+	font-size: 50px;
+	font-weight: 300;
+}
+#header > button {
+	font-size:20px;
+}
+#header > .container {
+	padding-top:40px;
+}
+
+.description {
+	color:#C5CAE9;
+}
+
+#examples {
+	padding-top:40px;
+}
+
+.github {
+	margin-top:30px;
+}
+.github > a {
+	color: white;
+	text-decoration: none;
+}
+.github > a:active {
+	color: white;
+	text-decoration: none;
+}
+
 .shaded {
 	background-color:#EEEEEE;
 	min-height:40px;
 	padding-top:10px;
 	border:1px solid #cccccc;
+	text-align:center;
 }
 
 .text-center {
 	text-align:center;
+}
+
+.row {
+	margin-bottom:10px;
 }
