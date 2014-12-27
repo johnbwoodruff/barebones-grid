@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
+* {
+	box-sizing:border-box;
+}
+
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
@@ -91,4 +95,22 @@ h2 {
 
 .row {
 	margin-bottom:10px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	border:1px solid #ccc;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 10px 20px;
+	border:1px solid #ccc;
 }

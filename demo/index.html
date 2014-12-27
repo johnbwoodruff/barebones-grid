@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="../dist/barebones-grid.min.css">
 	<link rel="stylesheet" href="app.css">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+
 </head>
 <body>
 	<div id="header">
@@ -23,10 +25,51 @@
 		</div>
 	</div>
 	<div id="examples" class="fixed-box">
+		<h2>Fixed/Fluid Box</h2>
+		<p>For a site with a more fixed layout, you can use the <code>.fixed-box</code> class. Below <code>768px</code>, the fixed-box will remain at 100% width. The breakpoints above <code>768px</code> are <code>992px</code> and <code>1200px</code>. To have a full-screen layout, use the <code>.fluid-box</code> class.</p>
+		<p>The class you decide to use (whether it be fixed or fluid) will be the wrapping "container" for the rest of your grid, as is shown below in the example.</p>
+
+<pre><code>&lt;div class="fluid-box"&gt;
+	&lt;div class="row"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+		<h2>Column Sizes</h2>
+		<p>There are four different column sizes. Large, Medium, Small, and Extra Small. Barebones Grid is based off of a standard 12 column layout. To use the columns, simply give the class <code>.{type}-{num}</code> to the object. In the case of a medium sized column, if you wish the object to have half the container size, give the class <code>.md-6</code>.</p>
+		<p>Below is a table of the available types, their screen sizes, and class prefixes.</p>
+		<table>
+			<thead>
+				<th></th>
+				<th>Extra Small</th>
+				<th>Small</th>
+				<th>Medium</th>
+				<th>Large</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="bold">Screen Sizes</td>
+					<td>Less than 768px</td>
+					<td>768px to 991px</td>
+					<td>992px to 1199px</td>
+					<td>1200px and above</td>
+				</tr>
+				<tr>
+					<td class="bold">Class Prefixes</td>
+					<td><code>.xs-</code></td>
+					<td><code>.sm-</code></td>
+					<td><code>.md-</code></td>
+					<td><code>.lg-</code></td>
+				</tr>
+			</tbody>
+		</table>
+
 		<h2>Example</h2>
+		<p>Here is an example of how to use the grid system, what it looks like, and how it behaves with resizing. (feel free to resize your screen larger and smaller to see) This is using the medium column class.</p>
 		<div class="row">
-			<div class="md-1 shaded">.md-1</div>
-			<div class="md-1 shaded">.md-1</div>
+			<div class="md-1 sm-6 shaded">.md-1</div>
+			<div class="md-1 sm-6 shaded">.md-1</div>
 			<div class="md-1 shaded">.md-1</div>
 			<div class="md-1 shaded">.md-1</div>
 			<div class="md-1 shaded">.md-1</div>
@@ -51,17 +94,35 @@
 			<div class="md-8 md-offset-2 shaded">.md-8 .md-offset-2</div>
 		</div>
 
-		<h2>Fixed/Fluid Box</h2>
-		<p>For a site with a more fixed layout, you can use the <code>.fixed-box</code> class. Below <code>768px</code>, the fixed-box will remain at 100% width. The breakpoints above <code>768px</code> are <code>992px</code> and <code>1200px</code>. To have a full-screen layout, use the <code>.fluid-box</code> class.</p>
+		<p>Below is the code for the example above.</p>
 
-		<h2>Column Sizes</h2>
-		<p>There are four different column sizes. Large, Medium, Small, and Extra Small. Barebones Grid is based off of a standard 12 column layout. To use the columns, simply give the class <code>.{type}-{num}</code> to the object. In the case of a medium sized column, if you wish the object to have half the container size, give the class <code>.md-6</code>.</p>
+<pre><code class="html">&lt;div class="row"&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+	&lt;div class="md-1"&gt;.md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+	&lt;div class="md-8"&gt;.md-8&lt;/div&gt;
+	&lt;div class="md-2"&gt;.md-2&lt;/div&gt;
+	&lt;div class="md-2"&gt;.md-2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+	&lt;div class="md-6"&gt;.md-6&lt;/div&gt;
+	&lt;div class="md-6"&gt;.md-6&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+	&lt;div class="md-8 md-offset-2"&gt;.md-8 .md-offset-2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-		<h2>Large Columns</h2>
-		<p>Large columns are for screen sizes of <code>1200px</code> and up. Anything under that size, without specifying a smaller column size, will cause the columns to stack. Use the class <code>.lg-{num}</code> where <code>{num}</code> is a number from 1 to 12.</p>
-
-		<h2>Medium Columns</h2>
-		<p>Medium columns are for screen sizes from <code>992px</code> up to <code>1199px</code>. Again, below that size and the columns will stack. Above that size, however, the columns will remain the same proportion with relation to the screen size. Use the class <code>.md-{num}</code> where <code>{num}</code> is a number from 1 to 12.</p>
 
 		<h2>Helper Classes</h2>
 		<p>There are several helper classes provided for your convenience which help with bootstrapping your application.</p>
@@ -72,6 +133,8 @@
 
 	</div>
 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>

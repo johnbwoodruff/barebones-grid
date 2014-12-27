@@ -1,10 +1,10 @@
 @import 'variables.less';
 
 // Box sizing
-.box-sizing(@boxmodel) {
-	-webkit-box-sizing: @boxmodel;
-	-moz-box-sizing: @boxmodel;
-	box-sizing: @boxmodel;
+.box-sizing(@sizing) {
+	-webkit-box-sizing: @sizing;
+	-moz-box-sizing: @sizing;
+	box-sizing: @sizing;
 }
 
 .clear {
@@ -65,27 +65,27 @@
 	}
 }
 
-.make-grid-columns() {
+.make-cols() {
 	// Common styles for all sizes of grid columns
 	.col(@index) {
 		@item: ~".xs-@{index}, .sm-@{index}, .md-@{index}, .lg-@{index}";
 		.col((@index + 1), @item);
 	}
 	.col(@index, @list) when (@index =< @columns) {
-	@item: ~".xs-@{index}, .sm-@{index}, .md-@{index}, .lg-@{index}";
-	.col((@index + 1), ~"@{list}, @{item}");
-}
-.col(@index, @list) when (@index > @columns) {
-	@{list} {
-		position: relative;
-		// Prevent columns from collapsing when empty
-		min-height: 1px;
-		// Inner gutter via padding
-		padding-left:  (@gutter-width / 2);
-		padding-right: (@gutter-width / 2);
+		@item: ~".xs-@{index}, .sm-@{index}, .md-@{index}, .lg-@{index}";
+		.col((@index + 1), ~"@{list}, @{item}");
 	}
-}
-.col(1);
+	.col(@index, @list) when (@index > @columns) {
+		@{list} {
+			position: relative;
+			// Prevent columns from collapsing when empty
+			min-height: 1px;
+			// Inner gutter with padding
+			padding-left:  (@gutter-width / 2);
+			padding-right: (@gutter-width / 2);
+		}
+	}
+	.col(1);
 }
 
 .float-grid-columns(@class) {
@@ -130,7 +130,7 @@
 	.loop-grid-columns(@columns, @class, offset);
 }
 
-.make-grid-columns();
+.make-cols();
 
 // Extra small grid
 // Columns and offsets for extra small devices like
