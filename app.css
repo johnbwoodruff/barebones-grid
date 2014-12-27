@@ -114,3 +114,16 @@ td, th {
 	padding: 10px 20px;
 	border:1px solid #ccc;
 }
+
+.downloadLink {
+	color:white;
+	text-decoration:none;
+}
+.downloadLink:hover {
+	color:white;
+	text-decoration:none;
+}
+.downloadLink:active {
+	color:white;
+	text-decoration:none;
+}
