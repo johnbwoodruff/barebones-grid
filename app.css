@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+* {
+	box-sizing:border-box;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400;
+	margin:0;
+}
+
+code {
+	padding: 2px 4px;
+	font-size: 90%;
+	color: #3F51B5;
+	background-color: #E8EAF6;
+	border: 1px solid #C5CAE9;
+	border-radius: 4px;
+}
+
+p {
+	line-height: 26px;
+}
+
+button {
+	background-color: transparent;
+	border: 1px solid white;
+	padding: 15px 30px;
+	font-size: 15px;
+	color: white;
+	font-weight: 100;
+	cursor:pointer;
+	border-radius:4px;
+}
+
+h2 {
+	border-bottom:1px solid #cccccc;
+	margin-bottom:20px;
+}
+
+#header {
+	width: 100%;
+	height: 200px;
+	background-color: #3F51B5;
+	color: #FFFFFF;
+}
+#header > h1 {
+	font-size: 50px;
+	font-weight: 300;
+}
+#header > button {
+	font-size:20px;
+}
+#header > .fixed-box {
+	padding-top:40px;
+}
+
+.description {
+	color:#C5CAE9;
+}
+
+#examples {
+	padding-top:40px;
+}
+
+.github {
+	margin-top:30px;
+}
+.github > a {
+	color: white;
+	text-decoration: none;
+}
+.github > a:active {
+	color: white;
+	text-decoration: none;
+}
+
+.shaded {
+	background-color: #F5F5F5;
+	min-height: 40px;
+	padding-top: 10px;
+	border: 1px solid #CCC;
+	text-align: center;
+}
+
+.text-center {
+	text-align:center;
+}
+
+.row {
+	margin-bottom:10px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	border:1px solid #ccc;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 10px 20px;
+	border:1px solid #ccc;
+}
