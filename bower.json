@@ -12,8 +12,20 @@
 		"web"
 	],
 	"main": [
-		"less/barebones-grid.less",
-		"dist/barebones-grid.css"
+		"dist/barebones-grid.min.css"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+		"less",
+		"css",
+		"src",
+		"karma.conf.js",
+		"Gruntfile.js",
+		"module.*"
 	],
 	"homepage": "http://jbw91.github.io/barebones-grid"
 }
